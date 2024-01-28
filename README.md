@@ -1,70 +1,185 @@
-# Getting Started with Create React App
+## Homework Night 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Today your going to make a page that lists several of your favorite movies.
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+- create a new react app in your day 2 folder `npx create-react-app day-2-homework`
 
-### `npm start`
+- cd into the new folder, run `npm start` to see default screen
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## App.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- empty the contents of app.js so it looks like so:
 
-### `npm test`
+```js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+function App() {
+  return (
+    <div className="App">
 
-### `npm run build`
+    </div>
+  );
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default App;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+- create an array of 5 movies including name, year and rating and optionally an image.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
 
-### `npm run eject`
+function App() {
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  const movies = [
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
 
-## Learn More
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    },
+  ]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+  return (
+    <div className="App">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    </div>
+  );
+}
 
-### Analyzing the Bundle Size
+export default App;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Other Components
 
-### Making a Progressive Web App
+- create a components folder and in that folder create a movies.js file and a movie.js file with component boiler plate.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```js
+// the component function
+const ComponentName = (props) => {
 
-### Advanced Configuration
+    //The Components Returned JSX
+    return <div className="ComponentName"> This is ComponentName</div>
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+// export the component
+export default ComponentName
+```
 
-### Deployment
+## App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Import the Movies components into App.js and render it in Apps JSX and pass it the movies array as a prop.
 
-### `npm run build` fails to minify
+```js
+import Movies from "./components/Movies"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+function App() {
+
+  const movies = [
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
+
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
+
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
+
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
+
+    },
+    {
+      name: "xxxxxxxxxxxxxxxxx",
+      year: "2222",
+      rating: "G",
+      image: "https://www.something.com/image.png"
+
+    },
+  ]
+
+
+  return (
+    <div className="App">
+      <Movies movies={movies}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Use the chrome dev tools to confirm that the props have been passed down to the movies component (click on Movies in dev tools to examine its data.
+
+## Movies.js
+
+Grab the movies array from props and use the Array Map method to look over the array and render a Movie (not Movies) component for each movie. If you need a review on using the Map Method in React, [watch this video](https://www.youtube.com/watch?v=HYjDmu9sPfc).
+
+Using devtools, confirm that your component structure looks like so.
+
+```
+App
+----Movies
+-------- Movie
+-------- Movie
+-------- Movie
+-------- Movie
+-------- Movie
+```
+
+Also click on each movie and confirm each movie is getting the information of one of the movies from the array.
+
+## Movie.js
+
+Using the movie from props, display the individual properties in the movie in this component, you should now see all 5 movies on the screen. If you have have trouble knowing the name of the variables in your component, use dev tools to examine the props object and what is inside it for that component.
+
+[Watch This Video on React DevTools](https://www.youtube.com/watch?v=2Kn1fry91tk)
+
+## Hungry For More
+
+Never hurts to get more styling practice so use SASS or CSS to style the page!

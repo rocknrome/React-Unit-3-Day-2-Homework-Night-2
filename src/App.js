@@ -35,7 +35,25 @@ function App() {
       year: "1999",
       rating: "R",
       image: "https://m.media-amazon.com/images/I/51DUmDryAvL._AC_UF894,1000_QL80_.jpg" 
-    }
+    },
+    {
+      name: "Gone in 60 seconds",
+      year: "2000",
+      rating: "R",
+      image: "https://m.media-amazon.com/images/I/71ddRUjKM-S._AC_UF894,1000_QL80_.jpg" 
+    },
+    {
+      name: "Witcher",
+      year: "2019",
+      rating: "R",
+      image: "https://m.media-amazon.com/images/I/91Xb2icuHFL._AC_UF894,1000_QL80_.jpg" 
+    },
+    {
+      name: "Billions",
+      year: "2016",
+      rating: "R",
+      image: "https://m.media-amazon.com/images/I/A1f84KOq4nL._AC_UF894,1000_QL80_.jpg" 
+    },
   ]);
 
   return (
